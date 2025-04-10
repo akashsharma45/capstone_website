@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecast and Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="tit">
+  <center>  <button class="day-night" id="btn" onclick="iphone13()">🌙</button></center>
+
+          <h1 id ="title">Weather Forecast and Prediction</h1>
+        </div>
+        <div class="headerDiv">
+          <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="city-input">
+            <button onclick="getWeather()">Search</button>
+          </div>
+          <button class="day-night" id="night-day" onclick="dayNight()">Dark</button>
+        </div>
+    </header>
+
+
+<div class="f1">
+<div class="f1-column">
+        <div class="mark-copy">
+            <p class="head">location</p>
+            <h2 id="city-name" class="mid">City</h2>
+            <p id="location" class="tail">NA</p>
+        </div>
+
+        <div class="mark-copy">
+            <p class="head">Temperature</p>
+            <h2 id="temperature" class="mid">Temp</h2>
+            <p id="condition" class="tail">NA</p>
+        </div>
+
+        <div class="mark-copy">
+            <p class="head">Wind</p>
+            <h2 id="wind_speed" class="mid">Speed</h2>
+            <p id="wind_dir" class="tail">NA</p>
+        </div>
+</div> 
+<div class="f1-column"> 
+        <div class="mark-copy">
+            <p class="head">Pressure</p>
+            <h2 id="pressure" class="mid">Pressure</h2>
+            <p class="tail">NA</p>
+        </div>
+
+        <div class="mark-copy">
+            <p class="head">Humidity</p>
+            <h2 id="humidity" class="mid">Humidity</h2>
+            <p class="tail">NA</p>
+        </div>
+        
+        <div class="mark-copy">
+            <p class="head">Visibility</p>
+            <h2 id="visibility" class="mid">Visible</h2>
+            <p class="tail">NA</p>
+        </div>
+</div>  
+</div>
+
+<div class="prediction">
+    <div class="para">
+        <p> <center>Prediction Model Output</center></p>
+    </div>
+
+    <div class="f1">
+        <div class="f1-column">
+                <div class="mark-copy  rain-class">
+                    <p class="head">Rain prediction</p>
+                    <h2 id="rain-prediction" class="mid">yes/no</h2>
+                </div>
+        
+                <div class="mark-copy">
+                    <p class="head" id="pTime1">Time: </p>
+                    <h2 id="pTemp1" class="mid">Temp: </h2>
+                    <p id="pHum1" class="tail">Humidity: </p>
+                </div>
+        
+                <div class="mark-copy">
+                    <p class="head" id="pTime2">Time: </p>
+                    <h2 id="pTemp2" class="mid">Temp: </h2>
+                    <p id="pHum2" class="tail">Humidity: </p>
+                </div>
+        </div> 
+        <div class="f1-column"> 
+                <div class="mark-copy">
+                    <p class="head" id="pTime3">Time: </p>
+                    <h2 id="pTemp3" class="mid">Temp: </h2>
+                    <p id="pHum3" class="tail">Humidity: </p>
+                </div>
+        
+                <div class="mark-copy">
+                    <p class="head" id="pTime4">Time: </p>
+                    <h2 id="pTemp4" class="mid">Temp: </h2>
+                    <p id="pHum4" class="tail">Humidity: </p>
+                </div>
+                
+                <div class="mark-copy">
+                   <p class="head" id="pTime5">Time: </p>
+                    <h2 id="pTemp5" class="mid">Temp: </h2>
+                    <p id="pHum5" class="tail">Humidity: </p>
+                </div>
+        </div>   
+    </div>
+
+
+</div>
+<div class="info">
+
+    <div class="info-div">
+
+        <p class="info-heading">Air Quality</p>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">AQI</p>
+                <h3 id="aqi" class="f2_mid">Na</h3>
+            </div>
+           
+            <div class="f2">
+                <p class="f2_head">CO</p>
+                <h3  id="co" class="f2_mid">Na</h3>
+            </div>
+
+            <div class="f2">
+                <p class="f2_head">NO2</p>
+                <h3  id="no2" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">O3</p>
+                <h3  id="o3" class="f2_mid">Na</h3>
+            </div>
+      
+            <div class="f2">
+                <p class="f2_head">SO2</p>
+                <h3  id="so2" class="f2_mid">Na</h3>
+            </div>
+     
+            <div class="f2">
+                <p class="f2_head">PM10</p>
+                <h3  id="pm10" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="info-div">
+
+        <p class="info-heading">Today's Summary</p>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">Max Temp</p>
+                <h3  id="max_temp" class="f2_mid">Na</h3>
+            </div>
+        
+            <div class="f2">
+                <p class="f2_head">Min Temp</p>
+                <h3  id="min_temp" class="f2_mid">Na</h3>
+            </div>
+          
+            <div class="f2">
+                <p class="f2_head">Avg Temp</p>
+                <h3  id="avg_temp" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">Max Wind</p>
+                <h3  id="max_wind" class="f2_mid">Na</h3>
+            </div>
+          
+            <div class="f2">
+                <p class="f2_head">Precipitation</p>
+                <h3  id="precipitation" class="f2_mid">Na</h3>
+            </div>
+            
+            <div class="f2">
+                <p class="f2_head">Rain Chances</p>
+                <h3  id="rain_probability" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+    </div>
+   
+    <div class="info-div">
+        
+        <p class="info-heading">Astronomay</p>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">Sunrise</p>
+                <h3  id="sunrise" class="f2_mid">Na</h3>
+            </div>
+          
+            <div class="f2">
+                <p class="f2_head">Moonrise</p>
+                <h3  id="moonrise" class="f2_mid">Na</h3>
+            </div>
+           
+            <div class="f2">
+                <p class="f2_head">Moon phase</p>
+                <h3  id="moon_phase" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="f2">
+                <p class="f2_head">Sunset</p>
+                <h3  id="sunset" class="f2_mid">Na</h3>
+            </div>
+           
+            <div class="f2">
+                <p class="f2_head">Moonset</p>
+                <h3  id="moonset" class="f2_mid">Na</h3>
+            </div>
+         
+            <div class="f2">
+                <p class="f2_head">illumination</p>
+                <h3  id="moon_illumination" class="f2_mid">Na</h3>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<footer>
+    <p>Copyright © 2024 Akash Sharma All rights reserved</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

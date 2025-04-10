@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ffffff; /* White text for contrast */
+    background-image: url('587601.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh; /* Ensures the body covers the viewport height */
+    color: white; /* Sets the text color for contrast */
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black with slight gradient */
+    color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(30px); /* Glassy effect */
+}
+header h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headerDiv {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Glossy Transparent Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.19); /* Semi-transparent white */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    padding: 0.5rem;
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.search-box input {
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.2rem;
+    border: none;
+    width: 200px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2); /* More opaque white */
+    color: rgba(255, 255, 255, 0.728);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inset shadow */
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+}
+
+.search-box input:focus {
+    background: rgba(255, 255, 255, 0.2); /* More opaque white */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box button, .day-night {
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.142); /* Semi-transparent white */
+    color: rgba(255, 255, 255, 0.7);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.search-box button:hover, .day-night:hover {
+    background: rgba(255, 255, 255, 0.05); /* More opaque white */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+
+#btn{
+    display: none;
+}
+
+
+.f1 {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f1 .f1-column{
+
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.f1 .mark-copy {
+  
+    height: 90%;
+    width: 28%;
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition added for smooth scaling */
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.mark-copy:hover {
+    transform: scale(1.05); /* Expands the element by 10% in all directions */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances shadow to match the expansion */
+}
+
+
+.mark-copy .head {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.mark-copy .mid {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.mark-copy .tail {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+}
+
+.prediction {
+    height: 30vh;
+}
+
+.prediction .para {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+}
+
+.rain-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-div {
+    height: 85%;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.info-div:hover {
+    transform: translateY(-5px);
+}
+
+.info-heading {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-size: 1.2rem;
+}
+
+.info-div > div {
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+.f2 {
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.f2 .f2_head {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    width: 80%;
+}
+
+.f2_mid {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+footer {
+    height: 7vh;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+
+
+@media (max-width: 400px) {
+
+    
+    body{
+        
+        background-image: url('IMG_7262.JPG');
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+
+        #btn {
+            display: block;
+            z-index: 1000;
+           
+         
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+          
+        }
+
+        #btn {
+            padding: none;
+            margin-left: none;
+            border-radius: none;
+            background: none; /* Semi-transparent white */
+            color: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+                 }
+        
+        .search-box button:hover, .day-night:hover {
+            background:none; /* More opaque white */
+            transform:none; /* Lift effect on hover */
+        }
+        
+        
+    
+
+    }
+    
+    
+
+
+    header{
+      height: 23vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* gap: rem; */
+      
+    }
+   
+
+
+
+
+    .headerDiv{
+        /* align-items: center; */
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .headerDiv .day-night{
+        
+       display: none;
+
+    }
+
+    
+
+
+
+   .f1{
+    
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+   }
+   
+   .f1 .f1-column{
+    
+    width: 100%;
+   }
+   .f1 .f1-column .mark-copy{
+    height: 80%;
+    width: 28%;
+   }
+
+   .mark-copy .head{
+    font-size: 0.9rem;
+   }
+   .mark-copy .mid{
+    font-size: 1rem;
+   }
+   .mark-copy .tail{
+    font-size: 0.7rem;
+   }
+
+   .prediction{
+    height: 22vh;
+    
+   }
+
+   .prediction .para{
+    font-size: 1rem;
+    height: 20%;
+
+   }
+
+   .rain
+    
+   .info{
+    background-color: none;
+    margin-top: 1.5rem;
+    height: 120vh;
+    flex-direction: column;
+    gap: 1rem;
+   
+   }
+    
+   .info-div{
+    height: 30%;
+    width: 95%;
+   }
+
+   .info-div .info-heading{
+    font-size: 1rem;
+   }
+   
+   .f2 .f2_head{
+    font-size: 0.8rem;
+   }
+
+   .f2 .f2_mid{
+    font-size: 1rem;
+   }
+
+   footer {
+    height: 5vh;
+    font-size: .7rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+ 
+}
+
+   
+}
+
